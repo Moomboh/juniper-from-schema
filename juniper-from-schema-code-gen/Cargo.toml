@@ -22,3 +22,6 @@ colored = "1.8"
 
 [dev_dependencies]
 version-sync = "0.8"
+
+[features]
+no_validate_snake_case = []

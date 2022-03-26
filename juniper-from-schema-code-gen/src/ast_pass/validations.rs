@@ -43,7 +43,7 @@ impl FieldNameCaseValidator {
     }
 
     fn validate_field(&mut self, name: &str, pos: Pos) {
-        if is_snake_case(name) {
+        if is_snake_case(name) && cfg!(not(feature = "no_validate_snake_case")) {
             self.errors.emit_error(pos, ErrorKind::FieldNameInSnakeCase);
         }
     }

@@ -22,3 +22,6 @@ version-sync = "0.8"
 [lib]
 proc-macro = true
 path = "src/lib.rs"
+
+[features]
+no_validate_snake_case = ["juniper-from-schema-code-gen/no_validate_snake_case"]
